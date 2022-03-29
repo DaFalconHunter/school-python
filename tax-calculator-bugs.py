@@ -1,7 +1,7 @@
 #L4 WS4 Tax CalculatorBUGS.py 
 #Tax Calculator program  with 5 bugs
 
-salary = int(input("Please enter your annual salary: £")))
+salary = int(input("Please enter your annual salary: £"))
 
 if salary < 30000: 
 #Salaries under 30000 are taxed at 20%
@@ -16,5 +16,5 @@ else:
     tax = salary * 0.45 + 6400 + 48000
 
     
-print("Earnings of £",salray,"will attract taxes of £",round(tax,2))
+print("Earnings of £",salary,"will attract taxes of £",round(tax,2))
 input("Press ENTER to quit")
