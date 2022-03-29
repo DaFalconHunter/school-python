@@ -1,5 +1,6 @@
 # L4 WS4 Tax CalculatorBUGS.py
 # Tax Calculator program  with 5 bugs
+# CHALLENGE: Now, calculate remaining salary after tax at the end of the year and each month.
 
 salary = int(input("Please enter your annual salary: £"))
 
