@@ -19,3 +19,15 @@ while answer != "Boris Johnson":
 
 print("Correct! Well done.")
 print("It took you " + str(counter) + " attempts to get the answer right")
+
+#  Question 3:
+answer = input("Q3) What year was the Paris Climate Agreement held? ").title()
+counter = 1
+
+while answer != "2015":
+    answer = input("Incorrect, try again: ").title()
+    counter += 1
+
+print("Correct! Well done.")
+print("It took you " + str(counter) + " attempts to get the answer right")
+
