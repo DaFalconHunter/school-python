@@ -10,7 +10,7 @@ print("Correct! Well done.")
 print("It took you " + str(counter) + " attempts to get the answer right")
 
 #  Question 2:
-answer = input("Q2) What is the name of the current Prime Minister? ").title()
+answer = input("\nQ2) What is the name of the current Prime Minister? ").title()
 counter = 1
 
 while answer != "Boris Johnson":
@@ -21,7 +21,7 @@ print("Correct! Well done.")
 print("It took you " + str(counter) + " attempts to get the answer right")
 
 #  Question 3:
-answer = input("Q3) What year was the Paris Climate Agreement held? ").title()
+answer = input("\nQ3) What year was the Paris Climate Agreement held? ").title()
 counter = 1
 
 while answer != "2015":
@@ -32,7 +32,7 @@ print("Correct! Well done.")
 print("It took you " + str(counter) + " attempts to get the answer right")
 
 #  Question 4:
-answer = input("Q4) Where is the Last Untouched Wilderness? ").title()
+answer = input("\nQ4) Where is the Last Untouched Wilderness? ").title()
 counter = 1
 
 while answer != "Antarctica":
