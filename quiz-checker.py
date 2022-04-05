@@ -1,7 +1,19 @@
-answer = input("What is the capital of France? ").title()
+#  Question 1:
+answer = input("Q1) What is the capital of France? ").title()
 counter = 1
 
 while answer != "Paris":
+    answer = input("Incorrect, try again: ").title()
+    counter += 1
+
+print("Correct! Well done.")
+print("It took you " + str(counter) + " attempts to get the answer right")
+
+#  Question 2:
+answer = input("Q2) What is the name of the current Prime Minister? ").title()
+counter = 1
+
+while answer != "Boris Johnson":
     answer = input("Incorrect, try again: ").title()
     counter += 1
 
