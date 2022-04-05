@@ -16,5 +16,8 @@ else:
     salary = salary - 150000
     tax = salary * 0.45 + 6400 + 48000
 
-print("Earnings of £", salary, "will attract taxes of £", round(tax, 2))
+print("Earnings of £", salary, "will attract taxes of £", round(tax, 2), "and leave you with a remaining salary of", salary - tax)
+# Salary at the end of the year:
+
+
 input("Press ENTER to quit")
