@@ -31,3 +31,14 @@ while answer != "2015":
 print("Correct! Well done.")
 print("It took you " + str(counter) + " attempts to get the answer right")
 
+#  Question 4:
+answer = input("Q4) Where is the Last Untouched Wilderness? ").title()
+counter = 1
+
+while answer != "Antarctica":
+    answer = input("Incorrect, try again: ").title()
+    counter += 1
+
+print("Correct! Well done.")
+print("It took you " + str(counter) + " attempts to get the answer right")
+
