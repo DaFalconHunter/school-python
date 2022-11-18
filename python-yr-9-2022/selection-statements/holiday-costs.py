@@ -6,8 +6,8 @@ country = input("What country do you want to visit? ")
 destination = input("What is your destination? ")
 
 # - Request cost of flights and accommodation:
-adult_flight_cost = int(input("How much does your adult flight cost? "))
-adult_accom_cost = int(input("How much does your accommodation cost? "))
+adult_flight_cost = int(input("How much does 1 adult flight cost? "))
+adult_accom_cost = int(input("How much does 1 adult accommodation cost? "))
 
 # b)
 # - Ask how many children and adults are travelling:
