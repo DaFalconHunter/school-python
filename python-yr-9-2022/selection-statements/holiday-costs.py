@@ -51,10 +51,15 @@ total_acccom_cost = round(total_adults_accom_cost + total_child_accom_cost, 2)
 
 # 1. e)
 # - Calculate total holiday cost:
-total_holiday_cost = total_adults_flight_cost + total_child_flight_cost + total_adults_accom_cost + total_child_accom_cost
+total_holiday_cost = (
+    total_adults_flight_cost
+    + total_child_flight_cost
+    + total_adults_accom_cost
+    + total_child_accom_cost
+)
 
 # 1. f)
-# - Print summary of all holiday details: 
+# - Print summary of all holiday details:
 #   - Country ✔
 #   - Destination ✔
 #   - No. of adults ✔
@@ -89,7 +94,7 @@ Enjoy your holiday!
     free_child_bool=free_child_bool,
     total_flight_cost=total_flight_cost,
     total_acccom_cost=total_acccom_cost,
-    total_holiday_cost=total_holiday_cost
+    total_holiday_cost=total_holiday_cost,
 )
 
 print(holiday_summary)
