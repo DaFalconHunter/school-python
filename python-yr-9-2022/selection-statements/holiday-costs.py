@@ -13,6 +13,7 @@ adult_accom_cost = int(input("How much does 1 adult accommodation cost? "))
 # - Ask how many children and adults are travelling:
 num_children = int(input("How many children are travelling with you? "))
 num_adults = int(input("And how many adults? "))
+party_num = num_children + num_adults
 
 # 2. a)
 # - Free child place
@@ -58,6 +59,19 @@ total_holiday_cost = (
     + total_child_accom_cost
 )
 
+# 2. b)
+# - If party no. > 5: => 10% discount on full price:
+if party_num > 5:
+    holiday_10 = round(total_holiday_cost * 0.9, 2)
+else:
+    holiday_10 = total_holiday_cost
+
+holiday_10_bool = 0
+if holiday_10 != total_holiday_cost:
+    holiday_10_bool = True
+else:
+    holiday_10_bool = False
+
 # 1. f)
 # - Print summary of all holiday details:
 #   - Country ✔
@@ -77,12 +91,15 @@ Destination you are headed to: {destination}
 No. of adults travelling: {num_adults}
 No. of children travelling: {num_children}
 
-Discounts & deductions:
- - Free child place incl. (True/False): {free_child_bool}
-
 Cost of flights: £{total_flight_cost}
 Cost of accommodation: £{total_acccom_cost}
 Total holiday cost: £{total_holiday_cost}
+
+Discounts & deductions:
+ - Free child place incl. (True/False): {free_child_bool}
+ - 10% discount for travelling in a group of > 5: {holiday_10_bool}
+
+Final holiday costs: £{holiday_10}
 
 Enjoy your holiday!
 **************************************************
@@ -92,6 +109,8 @@ Enjoy your holiday!
     num_adults=num_adults,
     num_children=num_children,
     free_child_bool=free_child_bool,
+    holiday_10_bool=holiday_10_bool,
+    holiday_10=holiday_10,
     total_flight_cost=total_flight_cost,
     total_acccom_cost=total_acccom_cost,
     total_holiday_cost=total_holiday_cost,
