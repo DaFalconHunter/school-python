@@ -1,13 +1,17 @@
 import random
-compnum=random.randint(1,100)
+compnum = random.randint(1,100)
+playagain = True
+guesses = 0
 while playagain == True:
     usernum = int(input("Guess a number:" ))
-    guesses = 1
-    if usernum == comnum:
+    if usernum == compnum:
         print("Correct")
         playagain = False
-    elif usernum < compnum:
+        guesses += 1
+    elif usernum > compnum:
         print("Too high")
+        guesses += 1
     else:
         print("Too low")
-print("You took", guesses "turns to get it right")
+        guesses += 1
+print("You took", guesses, "turns to get it right")
