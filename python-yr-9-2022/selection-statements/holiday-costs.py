@@ -59,12 +59,33 @@ total_holiday_cost = (
     + total_child_accom_cost
 )
 
+# 3. - Final Discounts
+# - 💷 > £1000: => -1%🔻
+# - 💷 > £2000: => -2%🔻
+# - 💷 > £5000: => -7%🔻
+
+holiday_7_bool = False
+holiday_2_bool = False
+holiday_1_bool = False
+
+if total_holiday_cost > 5000:
+    holiday_disc = total_holiday_cost * 0.93
+    holiday_7_bool = True
+elif total_holiday_cost > 2000:
+    holiday_disc = total_holiday_cost * 0.98
+    holiday_2_bool = True
+elif total_holiday_cost > 1000:
+    holiday_disc = total_holiday_cost * 0.99
+    holiday_1_bool = True
+else:
+    holiday_disc = total_holiday_cost
+
 # 2. b)
-# - If party no. > 5: => 10% discount on full price:
+# - If party no. > 5: => -10%🔻 on full price:
 if party_num > 5:
     holiday_10 = round(total_holiday_cost * 0.9, 2)
 else:
-    holiday_10 = total_holiday_cost
+    holiday_10 = holiday_disc
 
 holiday_10_bool = 0
 if holiday_10 != total_holiday_cost:
@@ -98,6 +119,9 @@ Total holiday cost: £{total_holiday_cost}
 Discounts & deductions:
  - Free child place incl. (True/False): {free_child_bool}
  - 10% discount for travelling in a group of > 5: {holiday_10_bool}
+ - Total holiday cost > £1000: => -1%🔻: {holiday_1_bool}
+ - Total holiday cost > £2000: => -2%🔻: {holiday_2_bool}
+ - Total holiday cost > £5000: => -7%🔻: {holiday_7_bool}
 
 Final holiday costs: £{holiday_10}
 
@@ -111,6 +135,9 @@ Enjoy your holiday!
     free_child_bool=free_child_bool,
     holiday_10_bool=holiday_10_bool,
     holiday_10=holiday_10,
+    holiday_1_bool=holiday_1_bool,
+    holiday_2_bool=holiday_2_bool,
+    holiday_7_bool=holiday_7_bool,
     total_flight_cost=total_flight_cost,
     total_acccom_cost=total_acccom_cost,
     total_holiday_cost=total_holiday_cost,
