@@ -10,7 +10,7 @@ playagain = True
 guesses = 0
 
 # Start game loop:
-# while playagain == True: ==> Legacy code 
+# while playagain == True: ==> Legacy code
 # ----> remove playagain var. to reduce memory footprint
 while True:
     # Take user guess input:
@@ -20,7 +20,7 @@ while True:
     # Kill the loop if the user guesses correctly:
     if usernum == compnum:
         print("Correct")
-        # playagain = False ==> Legacy code 
+        # playagain = False ==> Legacy code
         # ----> remove playagain var. to reduce memory footprint
         break
     elif usernum > compnum: # Display comparison if incorrect:
