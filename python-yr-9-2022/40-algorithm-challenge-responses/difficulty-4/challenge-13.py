@@ -9,3 +9,9 @@ The company gives each employees 28 days holiday each year. Holidays are awarded
 
 2. Part time employees get a proportion of holiday allowance based on how many days they work, e.g. An employee who works 1 day a week would only get 1/5th of the holidays allowed.
 """
+
+# Retrieve employee details:
+
+# Full time or part time?
+emp_type = input('Full time (f) or part time (p)? ')
+print(emp_type)
