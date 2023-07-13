@@ -9,3 +9,9 @@ man_colour = red_man
 traffic_light_colour = green_light
 
 print(f"Pedestrians: {man_colour}\nTraffic: {traffic_light_colour}")
+button_press = input("Press button (y/n)? ")
+
+if button_press == "y":
+    traffic_light_colour = amber_light
+
+print(f"Pedestrians: {man_colour}\nTraffic: {traffic_light_colour}")
