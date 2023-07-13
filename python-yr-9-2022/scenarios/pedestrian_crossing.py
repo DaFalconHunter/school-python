@@ -21,5 +21,13 @@ if button_press == "y":
     print(f"Pedestrians: {man_colour}\nTraffic: {traffic_light_colour}\n")
     time.sleep(2)
     man_colour = green_man
-    print(f"Pedestrians: {man_colour}\nTraffic: {traffic_light_colour}\nBEEEEEEEP\n")
-
+    print(f"Pedestrians: {man_colour}\nTraffic: {traffic_light_colour}\nBOOOOOOOP Time to cross!\n")
+    time.sleep(8)
+    print(f"Pedestrians: (flashing) {man_colour}\nTraffic: {traffic_light_colour}\nBEEEEEEEP Almost finished!\n")
+    time.sleep(4)
+    man_colour = red_man
+    print(f"Pedestrians: {man_colour}\nTraffic: {traffic_light_colour}\n\t" + " " + f"{amber_light}\n")
+    time.sleep(2)
+    man_colour = red_man
+    traffic_light_colour = green_light
+    print(f"Pedestrians: {man_colour}\nTraffic: {traffic_light_colour}\n")
