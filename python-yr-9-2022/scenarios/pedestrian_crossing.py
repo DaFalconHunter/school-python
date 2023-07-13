@@ -6,4 +6,4 @@ amber_light = "AMBER LIGHT 🟠 🚦"
 green_light = "GREEN LIGHT 🟢 🚦"
 
 man_colour = red_man
-traffic_light_colour = "GREEN LIGHT 🟢 🚦"
+traffic_light_colour = green_light
