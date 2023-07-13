@@ -1,3 +1,5 @@
+import time
+
 red_man = "RED MAN 🔴 🚶"
 green_man = "GREEN MAN 🟢 🚶"
 
