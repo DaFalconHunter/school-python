@@ -9,6 +9,6 @@ while total < 100:
     # Request integer number user input:
     num = int(input("Enter a number: "))
     # Add number to total
-    total = total + num
+    total += num
     # Output total
     print("The total is", total)
