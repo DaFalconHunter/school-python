@@ -8,8 +8,8 @@ import random
 # -------------------------
 # Subprograms
 # -------------------------
-def play_guess_the_number(min, max):
-    random_num = random.randint(min, max)
+def play_guess_the_number(minimum, maximum):
+    random_num = random.randint(minimum, maximum)
     guess = int(input("Guess the number: "))
     num_guesses = 1
     while guess != random_num:        
