@@ -48,6 +48,10 @@ songs_list = music_quiz_game_songs.songs_and_artists
 
 for i in range(len(songs_list)):
     # Print artist:
-    print(songs_list[i][0] + f" {songs_list[i][1][0]}")
+    # print(songs_list[i][0] + f" {songs_list[i][1][0]}")
+    artist = songs_list[i][0]
+    song_1st_letters = songs_list[i][1].split()
+    print(artist, song_1st_letters)
+
     # for j in range(len(songs_list[i])):
         # print(songs_list[i][j])
