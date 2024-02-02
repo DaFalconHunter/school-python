@@ -1,7 +1,7 @@
 songs_and_artists = [
-    ["Shotgun", "George Ezra"],
-    ["Natural", "Imagine Dragons"],
-    ["Cheap Thrills", "Sia"],
-    ["Violin Concerto in E Minor", "Felix Mendelssohn"],
-    ["Time (Inception)", "Hans Zimmer"]
+    ["George Ezra", "Shotgun"],
+    ["Imagine Dragons", "Natural"],
+    ["Sia", "Cheap Thrills"],
+    ["Felix Mendelssohn", "Violin Concerto in E Minor"],
+    ["Hans Zimmer", "Time from Inception"]
 ]
