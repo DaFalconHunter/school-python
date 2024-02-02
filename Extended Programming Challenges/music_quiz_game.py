@@ -16,7 +16,7 @@ Only authorised players can play the game.
 Where appropriate, input from the user should be validated. 
 Design, write, test and refine a system that:
 1.	✔ Allows a player to enter their details, which are then authenticated to ensure that they are an authorised player.
-2.	Stores a list of song names and artists in an external file.
+2.	✔ Stores a list of song names and artists in an external file.
 3.	Selects a song from the file, displaying the artist and the first letter of each word of the song title.
 4.	Allows the user up to two chances to guess the name of the song, stopping the game if they guess a song incorrectly on the second chance.
 5.	If the guess is correct, add the points to the player's score depending on the number of guesses.
