@@ -33,6 +33,7 @@ player_password = "468Th@nks-f0r_theF1sh"
 username_input = 0
 password_input = 0
 
+"""
 while True:
     username_input = input("Enter your username: ")
     password_input = input("Enter your password: ")
@@ -41,4 +42,12 @@ while True:
         break
     else:
         print("Incorrect username or password")
+"""
 
+songs_list = music_quiz_game_songs.songs_and_artists
+
+for i in range(len(songs_list)):
+    # Print artist:
+    print(songs_list[i][0] + f" {songs_list[i][1][0]}")
+    # for j in range(len(songs_list[i])):
+        # print(songs_list[i][j])
