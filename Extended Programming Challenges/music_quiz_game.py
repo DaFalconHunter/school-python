@@ -26,7 +26,7 @@ Design, write, test and refine a system that:
 
 """
 
-import music_quiz_game_songs
+from music_quiz_game_songs import songs_and_artists
 
 player_username = "Bob"
 player_password = "468Th@nks-f0r_theF1sh"
