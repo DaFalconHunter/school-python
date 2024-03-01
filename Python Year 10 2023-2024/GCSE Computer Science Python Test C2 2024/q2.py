@@ -5,7 +5,7 @@ length = int(input("Enter a base length"))
 height = int(input("Enter a height"))
 if length < 20:
     area = (length * height) / 2
-    print(num1)
+    print(area)
 else:
     print("Base length is too long.")
 
