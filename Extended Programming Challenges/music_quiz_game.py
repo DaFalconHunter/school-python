@@ -53,12 +53,12 @@ for i in range(len(songs_list)):
     # print(artist)
     song_split = songs_list[i][1].split()
     # print(song_split)
-    song_split_1st_letters = [ s[0] for s in songs_list[i][1].split() ]
+    song_split_1st_letters = [s[0] for s in songs_list[i][1].split()]
     song_join = "    ".join(song_split_1st_letters)
     print(f"{artist}   {song_join}")
-    # song_split_1st_letters = 
+    # song_split_1st_letters =
     # song_1st_letters = songs_list[i][1].split()[0]
     # print(artist, song_1st_letters)
 
     # for j in range(len(songs_list[i])):
-        # print(songs_list[i][j])
+    # print(songs_list[i][j])
