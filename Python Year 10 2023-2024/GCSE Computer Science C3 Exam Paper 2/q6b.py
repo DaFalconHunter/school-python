@@ -7,10 +7,10 @@
 import random
 a = input("Enter first letter of first name") 
 b = input("Enter first letter of second name") 
-c = 
-again = “Y”
-while again = "Y"
+c = random.randint(1, 1000)
+again = "Y"
+while again == "Y":
     pilotCode = a + b + str(c)
     print(pilotCode)
-    again=input(“Do you want to generate another code? “
-print(“Goodbye”)
+    again = input("Do you want to generate another code? ")
+print("Goodbye")
