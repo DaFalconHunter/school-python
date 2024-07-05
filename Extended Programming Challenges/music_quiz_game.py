@@ -103,6 +103,7 @@ print(f"Your score: {points} points")
 # print(player_scores.read())
 # player_scores.close()
 
+"""
 player_scores = open(r"Extended Programming Challenges/player_scores.txt", "a", encoding="utf-8")
 curr_time = datetime.datetime.now()
 time = f"{curr_time.hour + 1}:{curr_time.minute}:{curr_time.second} - {curr_time.day}/{curr_time.month}/{curr_time.year}"
@@ -113,3 +114,11 @@ player_scores.close()
 player_scores = open(r"Extended Programming Challenges/player_scores.txt", "r", encoding="utf-8")
 print(player_scores.read())
 player_scores.close()
+"""
+
+player_scores = open(r"Extended Programming Challenges/player_scores.txt", "r", encoding="utf-8")
+content = player_scores.readlines()
+scores = content[1:]
+print(scores)
+
+
