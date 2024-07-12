@@ -4,5 +4,5 @@
 #to display the word "kebab" 10 times
 #HINT: There might be some indentation
 
-print("kebab")
 for i in range(10):
+    print("kebab")
