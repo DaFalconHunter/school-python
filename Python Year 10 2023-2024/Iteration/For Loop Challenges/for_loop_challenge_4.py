@@ -5,7 +5,7 @@
 #It should then display the times table
 #Also, you may need to fix indentation
 
-for i in range(1,13):
 number = int(input("Enter a times table: "))
 print("showing the",number,"times table")
-print(i ,"x", number, "=", i+number)
+for i in range(1,13):
+    print(i ,"x", number, "=", i*number)
