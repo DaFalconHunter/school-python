@@ -7,6 +7,7 @@
 #ask the user how many times they want...
 #their name to be displayed
 
-print(name)
-for i in range(2):
 name = str(input("Input your name>>>"))
+times = int(input("How many times do you want your name displayed? "))
+for i in range(times):
+    print(name)
