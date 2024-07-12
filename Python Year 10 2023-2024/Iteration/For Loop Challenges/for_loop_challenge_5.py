@@ -4,6 +4,6 @@
 #It should countdown from 10 then display "blast off"
 #Also, you may need to fix indentation
 
-print (i)
+for i in range(10, 0, -1):
+    print (i)
 print("!!Blast off!!")
-for i in range(12, 3, -1):
