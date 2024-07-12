@@ -4,5 +4,8 @@
 # 2 times table. Change it to display the..
 # answers to the 3 times table
 
-for i in range(0, 25, 2):
+# for i in range(0, 25, 2):
+#     print(i)
+
+for i in range(0, 37, 3):
     print(i)
