@@ -11,19 +11,19 @@ moreScores = True
 # 2.
 while moreScores:
     score = int(input("Enter the next score, -1 to end: "))
-    
-# 3.   
+
+    # 3.
     if score != -1:
         numScore = numScore + 1
         totalScore = totalScore + score
     else:
         moreScores = False
-#4.
+# 4.
 if numScore == 0:
     print("\nNo scores entered - program ended")
 else:
     averageScore = totalScore / numScore
     print("\nAverage score: ", averageScore)
 
-#5.   
+# 5.
 input("\nPress ENTER to exit program ")
