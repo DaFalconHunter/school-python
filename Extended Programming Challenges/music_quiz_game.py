@@ -136,7 +136,8 @@ print(scores_split)
 
 # NOTE TO SELF: take scores into an array, id them by index, order from large to small, use their ids to order.
 
-# Print each item in scores file:
+# Retrieve scores only from scores file:
+score_nums = []
 for score_array in scores_split:
-    for score_item in score_array:
-        print(score_item)
+    score_nums.append(int(score_array[1]))
+print(score_nums)
