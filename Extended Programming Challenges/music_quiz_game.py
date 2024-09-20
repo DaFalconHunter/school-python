@@ -34,8 +34,8 @@ Design, write, test and refine a system that:
 import datetime
 import music_quiz_game_songs
 
-player_username = "Bill"
-player_password = "123"
+player_username = "1"
+player_password = "1"
 # player_password = "42Th@nks-f0r_theF1sh"
 username_input = ""
 password_input = ""
@@ -47,6 +47,7 @@ print("Username and password verified")
 
 songs_list = music_quiz_game_songs.songs_and_artists
 # print(songs_list)
+"""
 questions = []
 for i in range(len(songs_list)):
     # Print artist:
@@ -93,7 +94,7 @@ for i in range(len(questions)):
         break
 
 print(f"Your score: {points} points")
-
+"""
 # with os.scandir('Extended Programming Challenges/') as entries:
 #     for entry in entries:
 #         print(entry.name)
@@ -104,6 +105,7 @@ print(f"Your score: {points} points")
 # player_scores.close()
 
 """
+# Writing to Scores file with username, score and time/date
 player_scores = open(r"Extended Programming Challenges/player_scores.txt", "a", encoding="utf-8")
 curr_time = datetime.datetime.now()
 time = f"{curr_time.hour + 1}:{curr_time.minute}:{curr_time.second} - {curr_time.day}/{curr_time.month}/{curr_time.year}"
@@ -116,9 +118,25 @@ print(player_scores.read())
 player_scores.close()
 """
 
+# Retrieve content from player_scores.txt excluding 1st line:
 player_scores = open(r"Extended Programming Challenges/player_scores.txt", "r", encoding="utf-8")
 content = player_scores.readlines()
 scores = content[1:]
 print(scores)
 
+# Split scores entries by whitespace to get a 2D array of
+# player names, scores and times:
+scores_split = []
+for score_line in scores:
+    scores_split.append(score_line.split())
+    # Print each entry line of the scores file:
+    print(score_line)
 
+print(scores_split)
+
+# NOTE TO SELF: take scores into an array, id them by index, order from large to small, use their ids to order.
+
+# Print each item in scores file:
+for score_array in scores_split:
+    for score_item in score_array:
+        print(score_item)
