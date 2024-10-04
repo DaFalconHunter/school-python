@@ -1,6 +1,6 @@
-print("Get ready to ride")
-countdown = 10
-while countdown > 0:
-    print(countdown)
-    countdown -= 1
-print("Blast off!")
+print("Jump on three")
+countup = 1
+while countup < 4:
+    print(countup)
+    countdup += 1
+print("Jump!")
