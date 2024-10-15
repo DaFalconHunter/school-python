@@ -7,6 +7,5 @@ while count > 0:
     if email == userEmail and password == userPassword:
         print("Details correct, you may proceed")
         break
-    else:
-        print("Either your username or password is incorrect")
-        count -= 1
+    print("Either your username or password is incorrect")
+    count -= 1
