@@ -148,8 +148,7 @@ for score_line in scores_split:
             continue
         inted_line.append(score_item)
 
-    # print(score_line)
     score_inted.append(inted_line)
 
-# score_inted.sort()
+score_inted = sorted(score_inted, key=lambda score: -score[1])
 print(score_inted)
