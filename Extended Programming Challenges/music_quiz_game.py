@@ -197,7 +197,7 @@ for score_line in score_stringed:
                 date = score_item
         
         reformatted_line = f"{username}        {score} {points}        {time} {dash} {date}"
-        
+
     score_reformat.append(reformatted_line)
 
 print(score_reformat)
@@ -207,3 +207,12 @@ scores_joined = []
 
 scores_joined = "\n".join(score_reformat)
 print(scores_joined)
+
+# Rewrite to player_scores.txt
+# print(f"PLAYER-------SCORE------------TIME\n{scores_joined}")
+player_scores = open(r"Extended Programming Challenges/player_scores.txt", "w", encoding="utf-8")
+player_scores.write(f"PLAYER-------SCORE------------TIME\n{scores_joined}")
+player_scores.close()
+
+player_scores = open(r"Extended Programming Challenges/player_scores.txt", "r", encoding="utf-8")
+print(player_scores.read())
