@@ -136,8 +136,20 @@ print(scores_split)
 
 # NOTE TO SELF: take scores into an array, id them by index, order from large to small, use their ids to order.
 
-# Retrieve scores only from scores file:
-score_nums = []
-for score_array in scores_split:
-    score_nums.append(int(score_array[1]))
-print(score_nums)
+# Cast score ONLY from string to integer:
+score_inted = []
+for score_line in scores_split:
+    inted_line = []
+
+    for score_item in score_line:
+        if score_line.index(score_item) == 1:
+            print(score_item)
+            inted_line.append(int(score_item))
+            continue
+        inted_line.append(score_item)
+
+    # print(score_line)
+    score_inted.append(inted_line)
+
+# score_inted.sort()
+print(score_inted)
