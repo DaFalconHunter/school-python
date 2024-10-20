@@ -47,7 +47,7 @@ print("Username and password verified")
 
 songs_list = music_quiz_game_songs.songs_and_artists
 # print(songs_list)
-"""
+
 questions = []
 for i in range(len(songs_list)):
     # Print artist:
@@ -94,7 +94,7 @@ for i in range(len(questions)):
         break
 
 print(f"Your score: {points} points")
-"""
+
 # with os.scandir('Extended Programming Challenges/') as entries:
 #     for entry in entries:
 #         print(entry.name)
@@ -104,7 +104,6 @@ print(f"Your score: {points} points")
 # print(player_scores.read())
 # player_scores.close()
 
-"""
 # Writing to Scores file with username, score and time/date
 player_scores = open(r"Extended Programming Challenges/player_scores.txt", "a", encoding="utf-8")
 curr_time = datetime.datetime.now()
@@ -114,15 +113,15 @@ player_scores.write(score_entry)
 player_scores.close()
 
 player_scores = open(r"Extended Programming Challenges/player_scores.txt", "r", encoding="utf-8")
-print(player_scores.read())
+# print(player_scores.read())
 player_scores.close()
-"""
+
 
 # Retrieve content from player_scores.txt excluding 1st line:
 player_scores = open(r"Extended Programming Challenges/player_scores.txt", "r", encoding="utf-8")
 content = player_scores.readlines()
 scores = content[1:]
-print(scores)
+# print(scores)
 player_scores.close()
 
 # Split scores entries by whitespace to get a 2D array of
@@ -131,9 +130,9 @@ scores_split = []
 for score_line in scores:
     scores_split.append(score_line.split())
     # Print each entry line of the scores file:
-    print(score_line)
+    # print(score_line)
 
-print(scores_split)
+# print(scores_split)
 
 # Cast score ONLY from string to integer:
 score_inted = []
@@ -142,7 +141,7 @@ for score_line in scores_split:
 
     for score_item in score_line:
         if score_line.index(score_item) == 1:
-            print(score_item)
+            # print(score_item)
             inted_line.append(int(score_item))
             continue
         inted_line.append(score_item)
@@ -151,7 +150,7 @@ for score_line in scores_split:
 
 # Order scores from highest to lowest:
 score_inted = sorted(score_inted, key=lambda score: -score[1])
-print(score_inted)
+# print(score_inted)
 
 # Re-string the scores:
 score_stringed = []
@@ -160,14 +159,14 @@ for score_line in score_inted:
 
     for score_item in score_line:
         if score_line.index(score_item) == 1:
-            print(score_item)
+            # print(score_item)
             stringed_line.append(str(score_item))
             continue
         stringed_line.append(score_item)
 
     score_stringed.append(stringed_line)
 
-print(score_stringed)
+# print(score_stringed)
 
 # Select each part of the line into separate variables for reformatting.
 score_reformat = []
@@ -201,13 +200,13 @@ for score_line in score_stringed:
 
     score_reformat.append(reformatted_line)
 
-print(score_reformat)
+# print(score_reformat)
 
 # Rejoin scores:
 scores_joined = []
 
 scores_joined = "\n".join(score_reformat)
-print(scores_joined)
+# print(scores_joined)
 
 # Rewrite to player_scores.txt
 # print(f"PLAYER-------SCORE------------TIME\n{scores_joined}")
