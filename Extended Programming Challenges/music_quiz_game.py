@@ -168,12 +168,42 @@ for score_line in score_inted:
 
 print(score_stringed)
 
+# Select each part of the line into separate variables for reformatting.
+score_reformat = []
+username = 0
+score = 0
+points = 0
+time = 0
+dash = 0
+date = 0
+for score_line in score_stringed:
+    reformatted_line = []
+    for score_item in score_line:
+        reformatted_line = ""
+
+        # Variables:
+        match score_line.index(score_item):
+            case 0:
+                username = score_item
+            case 1:
+                score = score_item
+            case 2:
+                points = score_item
+            case 3:
+                time = score_item
+            case 4:
+                dash = score_item
+            case 5:
+                date = score_item
+        
+        reformatted_line = f"{username}        {score} {points}        {time} {dash} {date}"
+        
+    score_reformat.append(reformatted_line)
+
+print(score_reformat)
+
 # Rejoin scores:
 scores_joined = []
-for score_line in score_stringed:
-    scores_joined.append("  ".join(score_line))
 
-print(scores_joined)
-
-scores_joined = "\n".join(scores_joined)
+scores_joined = "\n".join(score_reformat)
 print(scores_joined)
