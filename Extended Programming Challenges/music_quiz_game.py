@@ -123,6 +123,7 @@ player_scores = open(r"Extended Programming Challenges/player_scores.txt", "r", 
 content = player_scores.readlines()
 scores = content[1:]
 print(scores)
+player_scores.close()
 
 # Split scores entries by whitespace to get a 2D array of
 # player names, scores and times:
@@ -214,5 +215,13 @@ player_scores = open(r"Extended Programming Challenges/player_scores.txt", "w", 
 player_scores.write(f"PLAYER-------SCORE------------TIME\n{scores_joined}")
 player_scores.close()
 
+# Read scores from player_scores.txt
 player_scores = open(r"Extended Programming Challenges/player_scores.txt", "r", encoding="utf-8")
-print(player_scores.read())
+lines = player_scores.readlines()
+
+# Output top 5 winning scores - have to join lines back together again here:
+print("These are the top 5 winning scores!")
+scores_joined = []
+scores_joined = "".join(lines[0:6])
+print(scores_joined)
+player_scores.close()
