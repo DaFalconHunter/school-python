@@ -134,8 +134,6 @@ for score_line in scores:
 
 print(scores_split)
 
-# NOTE TO SELF: take scores into an array, id them by index, order from large to small, use their ids to order.
-
 # Cast score ONLY from string to integer:
 score_inted = []
 for score_line in scores_split:
