@@ -34,7 +34,7 @@ Design, write, test and refine a system that:
 import datetime
 import music_quiz_game_songs
 
-player_username = "Bill"
+player_username = "the god"
 # player_password = "1"
 player_password = "42Th@nks-f0r_theF1sh"
 username_input = ""
