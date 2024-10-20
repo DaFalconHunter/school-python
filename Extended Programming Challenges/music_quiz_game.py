@@ -153,8 +153,6 @@ score_inted = sorted(score_inted, key=lambda score: -score[1])
 print(score_inted)
 
 # Re-string the scores:
-
-
 score_stringed = []
 for score_line in score_inted:
     stringed_line = []
@@ -169,3 +167,13 @@ for score_line in score_inted:
     score_stringed.append(stringed_line)
 
 print(score_stringed)
+
+# Rejoin scores:
+scores_joined = []
+for score_line in score_stringed:
+    scores_joined.append("  ".join(score_line))
+
+print(scores_joined)
+
+scores_joined = "\n".join(scores_joined)
+print(scores_joined)
