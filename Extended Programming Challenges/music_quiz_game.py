@@ -26,7 +26,7 @@ Design, write, test and refine a system that:
     guesses.
 6.	✔ Displays the number of points the player has when the game ends.
 7.	✔ Stores the name of the player and their score in an external file.
-8.	Displays the score and player name of the top 5 winning scores from the external file.
+8.	✔ Displays the score and player name of the top 5 winning scores from the external file.
 
 """
 
@@ -34,16 +34,16 @@ Design, write, test and refine a system that:
 import datetime
 import music_quiz_game_songs
 
-player_username = "1"
-player_password = "1"
-# player_password = "42Th@nks-f0r_theF1sh"
+player_username = "Bill"
+# player_password = "1"
+player_password = "42Th@nks-f0r_theF1sh"
 username_input = ""
 password_input = ""
 
 while username_input != player_username and password_input != player_password:
     username_input = input("Enter your username: ")
     password_input = input("Enter your password: ")
-print("Username and password verified")
+print("Username and password verified\n")
 
 songs_list = music_quiz_game_songs.songs_and_artists
 # print(songs_list)
@@ -81,19 +81,19 @@ for i in range(len(questions)):
             print("Well done!")
             if chances == 2:
                 points += 3
-                print("You earned 3 points!")
+                print("You earned 3 points!\n")
             elif chances == 1:
                 points += 1
-                print("You earned 1 point.")
+                print("You earned 1 point.\n")
             break
         else:
-            print("Uncultured fool, ya failiyer!")
+            print("Uncultured fool, ya failiyer!\n")
             chances -= 1
     if chances == 0:
-        print("Get cultured, dood")
+        print("Get cultured, dood\n")
         break
 
-print(f"Your score: {points} points")
+print(f"Your score: {points} points\n")
 
 # with os.scandir('Extended Programming Challenges/') as entries:
 #     for entry in entries:
