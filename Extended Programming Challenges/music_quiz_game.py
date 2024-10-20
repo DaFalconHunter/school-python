@@ -148,5 +148,24 @@ for score_line in scores_split:
 
     score_inted.append(inted_line)
 
+# Order scores from highest to lowest:
 score_inted = sorted(score_inted, key=lambda score: -score[1])
 print(score_inted)
+
+# Re-string the scores:
+
+
+score_stringed = []
+for score_line in score_inted:
+    stringed_line = []
+
+    for score_item in score_line:
+        if score_line.index(score_item) == 1:
+            print(score_item)
+            stringed_line.append(str(score_item))
+            continue
+        stringed_line.append(score_item)
+
+    score_stringed.append(stringed_line)
+
+print(score_stringed)
