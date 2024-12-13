@@ -34,15 +34,23 @@ Design, write, test and refine a system that:
 import datetime
 import music_quiz_game_songs
 
-player_username = "the god"
+ 
+player_username = "the-god"
+player_password = "1"
 # player_password = "1"
-player_password = "42Th@nks-f0r_theF1sh"
+# player_password = "42Th@nks-f0r_theF1sh"
 username_input = ""
 password_input = ""
 
-while username_input != player_username and password_input != player_password:
-    username_input = input("Enter your username: ")
+
+while True:
+    username_input = input("Enter your username (no spaces): ")
     password_input = input("Enter your password: ")
+    if password_input == player_password and username_input == player_username:
+        break
+    else:
+        print("Invalid username or password incorrect")
+
 print("Username and password verified\n")
 
 songs_list = music_quiz_game_songs.songs_and_artists
@@ -141,12 +149,22 @@ for score_line in scores_split:
 
     for score_item in score_line:
         if score_line.index(score_item) == 1:
-            # print(score_item)
-            inted_line.append(int(score_item))
+            # # print(score_item)
+            # inted_line.append(int(score_item))
+            # continue
+            try:
+                # Remove any non-digit characters before converting to int
+                cleaned_score = ''.join(filter(str.isdigit, score_item))
+                inted_line.append(int(cleaned_score))
+            except ValueError:
+                print(f"Warning: Invalid score value '{score_item}' found. Skipping this entry.")
+                break  # Skip this entire score line
             continue
         inted_line.append(score_item)
 
-    score_inted.append(inted_line)
+    if len(inted_line) == len(score_line):  # Only append if all items were processed
+        score_inted.append(inted_line)
+    # score_inted.append(inted_line)
 
 # Order scores from highest to lowest:
 score_inted = sorted(score_inted, key=lambda score: -score[1])
