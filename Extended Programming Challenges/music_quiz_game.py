@@ -33,9 +33,10 @@ Design, write, test and refine a system that:
 # import os
 import datetime
 import music_quiz_game_songs
+from tabulate import tabulate
 
  
-player_username = "the-god"
+player_username = "1"
 player_password = "1"
 # player_password = "1"
 # player_password = "42Th@nks-f0r_theF1sh"
@@ -115,8 +116,8 @@ print(f"Your score: {points} points\n")
 # Writing to Scores file with username, score and time/date
 player_scores = open(r"Extended Programming Challenges/player_scores.txt", "a", encoding="utf-8")
 curr_time = datetime.datetime.now()
-time = f"{curr_time.hour + 1}:{curr_time.minute}:{curr_time.second} - {curr_time.day}/{curr_time.month}/{curr_time.year}"
-score_entry = f"\n{player_username}:        {points} points        {time}"
+time = f"{curr_time.hour + 1}:{curr_time.minute}:{curr_time.second}    {curr_time.day}/{curr_time.month}/{curr_time.year}"
+score_entry = f"\n{player_username}        {points}        {time}"
 player_scores.write(score_entry)
 player_scores.close()
 
@@ -190,9 +191,7 @@ for score_line in score_inted:
 score_reformat = []
 username = 0
 score = 0
-points = 0
 time = 0
-dash = 0
 date = 0
 for score_line in score_stringed:
     reformatted_line = []
@@ -206,15 +205,11 @@ for score_line in score_stringed:
             case 1:
                 score = score_item
             case 2:
-                points = score_item
-            case 3:
                 time = score_item
-            case 4:
-                dash = score_item
-            case 5:
+            case 3:
                 date = score_item
         
-        reformatted_line = f"{username}        {score} {points}        {time} {dash} {date}"
+        reformatted_line = f"{username}        {score}        {time}    {date}"
 
     score_reformat.append(reformatted_line)
 
@@ -235,10 +230,25 @@ player_scores.close()
 # Read scores from player_scores.txt
 player_scores = open(r"Extended Programming Challenges/player_scores.txt", "r", encoding="utf-8")
 lines = player_scores.readlines()
+# print(lines)
+top_5 = lines[1:6]
+# print(top_5)
+
+scores_split = []
+for score_line in top_5:
+    scores_split.append(score_line.split())
+    # Print each entry line of the scores file:
+    # print(score_line)
+
+# print(scores_split)
 
 # Output top 5 winning scores - have to join lines back together again here:
 print("These are the top 5 winning scores!")
-scores_joined = []
-scores_joined = "".join(lines[0:6])
-print(scores_joined)
-player_scores.close()
+
+leaderboard = tabulate(
+    scores_split,
+    headers=["USERNAME", "SCORE", "TIME", "DATE"],
+    tablefmt="mixed_grid",
+    stralign="center"
+)
+print(leaderboard)
