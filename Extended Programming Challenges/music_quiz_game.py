@@ -36,7 +36,7 @@ import music_quiz_game_songs
 from tabulate import tabulate
 
  
-player_username = "1"
+player_username = "supremacy"
 player_password = "1"
 # player_password = "1"
 # player_password = "42Th@nks-f0r_theF1sh"

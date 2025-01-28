@@ -1,8 +1,14 @@
 songs_and_artists = [
+    # ["George Ezra", "Shotgun"],
+    # ["Imagine Dragons", "Natural"],
+    # ["Sia", "Cheap Thrills"],
+    # ["Felix Mendelssohn", "Violin Concerto in E Minor"],
+    # ["Jean Sibelius", "Violin Concerto in D Minor"],
+    # ["Hans Zimmer", "Time from Inception"]
     ["George Ezra", "Shotgun"],
-    ["Imagine Dragons", "Natural"],
+    ["Imagine Dragons", "Thunder"],
     ["Sia", "Cheap Thrills"],
-    ["Felix Mendelssohn", "Violin Concerto in E Minor"],
-    ["Jean Sibelius", "Violin Concerto in D Minor"],
+    ["Klaus Badelt", "Pirates of the Caribbean"],
+    ["John Williams", "Hedwig's Theme"],
     ["Hans Zimmer", "Time from Inception"]
 ]
