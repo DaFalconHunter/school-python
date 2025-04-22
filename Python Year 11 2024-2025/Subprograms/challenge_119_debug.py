@@ -29,7 +29,7 @@ def check_answer(comp_num, guess):
         else:
             guess = int(input("Too high, try again: "))
 
-# Main loop, where the program runs
+# Main function to run the program
 def main():
     comp_num = pick_num()
     guess = first_guess()
