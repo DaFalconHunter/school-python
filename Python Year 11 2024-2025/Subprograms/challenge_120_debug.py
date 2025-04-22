@@ -9,15 +9,16 @@ def addition():
     num2 = random.randint(5,20)
     print(num1, "+", num2, "= ")
     user_answer = int(input("your answer: "))
-    actual_answer = num1 * num2
+    actual_answer = num1 + num2
     answers = (user_answer, actual_answer)
     return answers
 
 def subtraction():
     num3 = random.randint(25,50)
-    num4= random.randint(1,25)
-    print (num3, "-", num4, "= ")
-    user_answer = num3/num4
+    num4 = random.randint(1,25)
+    print(num3, "-", num4, "= ")
+    user_answer = int(input("your answer: "))
+    actual_answer = num3 - num4
     answers = (user_answer, actual_answer)
     return answers
 
@@ -28,9 +29,9 @@ def check_answer(user_answer, actual_answer):
         print("Incorrect, the answer is", actual_answer)
 
 def main():
-    prnt("1) Addition")
+    print("1) Addition")
     print("2) Subtraction")
-    selection = int(input("Enter 1 or 2: ")
+    selection = int(input("Enter 1 or 2: "))
     if selection == 1:
         user_answer, actual_answer = addition()
         check_answer(user_answer, actual_answer)
