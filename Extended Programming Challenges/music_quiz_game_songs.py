@@ -12,9 +12,9 @@ songs_and_artists = [
     # ["John Williams", "Hedwig's Theme"],
     # ["Hans Zimmer", "Time from Inception"]
     ["Glass Animals", "Heatwave",],
-    ["Dijit Dosanjh", "Do You Know"],
+    ["Imagine Dragons", "Thunder"],
     ["George Ezra", "Green Green Grass"],
     ["Ed Sheeran", "Celestial"],
-    ["Barbatuques", "Baiana"],
+    ["Coldplay", "Viva La Vida"],
     ["Rick Astley", "Never Gonna Give You Up"]
 ]
